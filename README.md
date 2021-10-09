@@ -1,3 +1,17 @@
+NOTE: this is a fork of the official Mbed OS repo with added support for the platformio build system.
+This allows to use the latest version of Mbed OS with platformio.
+ 
+To use this repo in a platformio environment, use the `plateform_packages` option in your `platformio.ini` file like:
+
+```
+[env:mproject]
+platform = ststm32
+framework = mbed
+platform_packages =
+  framework-mbed @ https://github.com/douardda/platformio-framework-mbed
+board = nucleo-f303ze
+```
+
 [![Mbed OS][mbed-os-logo]][mbed-os-link]
 
 [![Build status master][mbed-master-svg]][mbed-master]
