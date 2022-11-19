@@ -118,7 +118,7 @@ This table summarizes the STM32Cube versions currently used in Mbed OS master br
 | L5          |    1.4.0     | https://github.com/STMicroelectronics/STM32CubeL5 |
 | U5          |    1.0.0     | https://github.com/STMicroelectronics/STM32CubeU5 |
 | WB          |    1.11.1    | https://github.com/STMicroelectronics/STM32CubeWB |
-| WL          |    1.0.0     | https://github.com/STMicroelectronics/STM32CubeWL |
+| WL          |    1.1.0     | https://github.com/STMicroelectronics/STM32CubeWL |
 
 In Mbed OS repository, we try to minimize the difference between "official" and copied files.
 
@@ -474,6 +474,14 @@ Detailed sleep Mbed OS description : https://os.mbed.com/docs/mbed-os/latest/api
 - debug profile is disabling deepsleep
 - deepsleep can also be disabled by application or drivers using sleep_manager_lock_deep_sleep()
 - deep-sleep-latency value is configured to 4 by default for STM32
+- trace with MBED_SLEEP_TRACING_ENABLED macro is set by default with low verbosity
+```
+    "target_overrides": {
+        "*": {
+            "platform.deepsleep-stats-enabled": true,
+            "platform.deepsleep-stats-verbose": false
+        },
+```
 
 
 ### WiFi configuration

@@ -1491,6 +1491,18 @@
         ],
         "device_name": "STM32F103RB"
     },
+    "MCU_STM32F103xC": {
+        "inherits": [
+            "MCU_STM32F1"
+        ],
+        "public": false,
+        "extra_labels_add": [
+            "STM32F103xC"
+        ],
+        "macros_add": [
+            "STM32F103xE"
+        ]
+    },
     "MCU_STM32F103xE": {
         "inherits": [
             "MCU_STM32F1"
@@ -1888,7 +1900,7 @@
             "HSE_VALUE=26000000"
         ],
         "overrides": {
-            "clock_source": "USE_PLL_HSI"
+            "clock_source": "USE_PLL_HSE_XTAL"
         },
         "components_remove": [
             "FLASHIAP"
@@ -2385,6 +2397,27 @@
             "MPU"
         ]
     },
+    "NUCLEO_F722ZE": {
+        "inherits": [
+            "MCU_STM32F7"
+        ],
+        "extra_labels_add": [
+            "STM32F722xE"
+        ],
+        "macros_add": [
+            "STM32F722xx"
+        ],
+        "device_has_add": [
+            "USBDEVICE"
+        ],
+        "supported_form_factors": [
+            "ARDUINO_UNO"
+        ],
+        "detect_code": [
+            "0812"
+        ],
+        "device_name": "STM32F722ZETx"
+    },
     "DISCO_F746NG": {
         "inherits": [
             "MCU_STM32F7"
@@ -2866,6 +2899,18 @@
             "ANALOGOUT"
         ]
     },
+    "NUCLEO_G0B1RE": {
+        "inherits": [
+            "MCU_STM32G0B1xE"
+        ],
+        "supported_form_factors": [
+            "ARDUINO_UNO"
+        ],
+        "detect_code": [
+            "0872"
+        ],
+        "device_name": "STM32G0B1RETx"
+    },
     "MCU_STM32G0C1xE": {
         "inherits": [
             "MCU_STM32G0"
@@ -2928,6 +2973,7 @@
             "ANALOGOUT",
             "FLASH",
             "MPU",
+            "SERIAL_ASYNCH",
             "TRNG",
             "CAN"
         ]
@@ -3494,6 +3540,22 @@
             "system_power_supply": "PWR_LDO_SUPPLY"
         }
     },
+    "MCU_STM32H753xI": {
+        "inherits": [
+            "MCU_STM32H7"
+        ],
+        "public": false,
+        "core": "Cortex-M7FD",
+        "extra_labels_add": [
+            "STM32H753xI"
+        ],
+        "macros_add": [
+            "STM32H753xx"
+        ],
+        "overrides": {
+            "system_power_supply": "PWR_LDO_SUPPLY"
+        }
+    },
     "MCU_STM32H7A3xIQ": {
         "inherits": [
             "MCU_STM32H7"
@@ -3617,6 +3679,18 @@
             "TRNG"
         ]
     },
+    "MCU_STM32L071xB": {
+        "inherits": [
+            "MCU_STM32L0"
+        ],
+        "public": false,
+        "extra_labels_add": [
+            "STM32L071xB"
+        ],
+        "macros_add": [
+            "STM32L071xx"
+        ]
+    },
     "MCU_STM32L071xZ": {
         "inherits": [
             "MCU_STM32L0"
@@ -3732,6 +3806,33 @@
             "SERIAL_ASYNCH",
             "FLASH",
             "MPU"
+        ]
+    },
+    "MCU_STM32L151xB": {
+        "inherits": [
+            "MCU_STM32L1"
+        ],
+        "public": false,
+        "extra_labels_add": [
+            "STM32L151xB"
+        ],
+        "device_has_remove": [
+            "LPTICKER"
+        ],
+        "macros_add": [
+            "STM32L151xB"
+        ]
+    },
+    "MCU_STM32L151xBA": {
+        "inherits": [
+            "MCU_STM32L1"
+        ],
+        "public": false,
+        "extra_labels_add": [
+            "STM32L151xBA"
+        ],
+        "macros_add": [
+            "STM32L151xBA"
         ]
     },
     "MCU_STM32L151xC": {
@@ -3872,6 +3973,23 @@
             "MPU",
             "SERIAL_ASYNCH",
             "TRNG"
+        ]
+    },
+    "MCU_STM32L412xB": {
+        "inherits": [
+            "MCU_STM32L4"
+        ],
+        "public": false,
+        "c_lib": "small",
+        "extra_labels_add": [
+            "STM32L412xB"
+        ],
+        "macros_add": [
+            "STM32L412xx"
+        ],
+        "device_has_remove": [
+            "ANALOGOUT",
+            "CAN"
         ]
     },
     "MCU_STM32L432xC": {
@@ -4244,6 +4362,21 @@
         ],
         "device_name": "STM32L496VGTx"
     },
+    "MCU_STM32L4P5xG": {
+        "inherits": [
+            "MCU_STM32L4"
+        ],
+        "public": false,
+        "components_add": [
+            "FLASHIAP"
+        ],
+        "extra_labels_add": [
+            "STM32L4P5xG"
+        ],
+        "macros_add": [
+            "STM32L4P5xx"
+        ]
+    },
     "MCU_STM32L4R5xI": {
         "inherits": [
             "MCU_STM32L4"
@@ -4586,6 +4719,16 @@
             "ARDUINO_UNO"
         ],
         "device_name": "STM32U585AIIx",
+        "extra_labels_add": [
+            "MX25LM51245G"
+        ],
+        "components_add": [
+            "OSPIF"
+        ],
+        "device_has_add": [
+            "QSPI",
+            "OSPI"
+        ],
         "components_add": ["EMW3080B"],
         "overrides": {
             "network-default-interface-type": "WIFI"
@@ -5997,6 +6140,170 @@
                 "std"
             ]
         }
+    },
+    "MAX32660": {
+        "inherits": [
+            "Target"
+        ],
+        "public": false,
+        "core": "Cortex-M4F",
+        "macros": [
+            "__SYSTEM_HFX=96000000",
+            "TARGET=MAX32660",
+            "TARGET_REV=0x4131",
+            "MBED_MPU_CUSTOM"
+        ],
+        "extra_labels": [
+            "Maxim",
+            "MAX32660"
+        ],
+        "supported_toolchains": [
+            "GCC_ARM",
+            "ARM"
+        ],
+        "device_has": [
+            "SERIAL",
+            "SERIAL_FC",
+            "STDIO_MESSAGES",
+            "PORTIN",
+            "PORTINOUT",
+            "PORTOUT",
+            "USTICKER",
+            "LPTICKER",
+            "INTERRUPTIN",
+            "SPI",
+            "I2C",
+            "RTC",
+            "SLEEP",
+            "WATCHDOG",
+            "FLASH"
+        ],
+        "supported_application_profiles" : ["full", "bare-metal"],
+        "supported_c_libs": {
+            "arm": [
+                "std",
+                "small"
+            ],
+            "gcc_arm": [
+                "std",
+                "small"
+            ]
+        }
+    },
+    "MAX32660EVSYS": {
+        "inherits": [
+            "MAX32660"
+        ],
+        "macros_add": [
+            "OPEN_DRAIN_LEDS"
+        ],
+        "device_has_remove": [
+            "LPTICKER"
+        ],
+        "extra_labels_add": [
+            "MAX32660EVSYS"
+        ],
+        "config": {
+            "stdio_uart": {
+                "help": "default STDIO port is defined in PeripheralNames.h file, but it can be overridden, default UART_1",
+                "value": null
+            },
+            "stdio_uart_tx": {
+                "help": "default TX STDIO pins is defined in PinNames.h file, but it can be overridden, default P0_10",
+                "value": null
+            },
+            "stdio_uart_rx": {
+                "help": "default RX STDIO pins is defined in PinNames.h file, but it can be overridden, default P0_11",
+                "value": null
+            }
+        },
+        "detect_code": [
+            "0421"
+        ]
+    },
+    "MAX32670": {
+        "inherits": [
+            "Target"
+        ],
+        "public": false,
+        "core": "Cortex-M4F",
+        "macros": [
+            "TARGET=MAX32670",
+            "TARGET_REV=0x4131",
+            "MBED_MPU_CUSTOM"
+        ],
+        "extra_labels": [
+            "Maxim",
+            "MAX32670"
+        ],
+        "supported_toolchains": [
+            "GCC_ARM",
+            "ARM"
+        ],
+        "device_has": [
+            "SERIAL",
+            "SERIAL_FC",
+            "STDIO_MESSAGES",
+            "PORTIN",
+            "PORTINOUT",
+            "PORTOUT",
+            "USTICKER",
+            "LPTICKER",
+            "INTERRUPTIN",
+            "SPI",
+            "I2C",
+            "RTC",
+            "SLEEP",
+            "WATCHDOG",
+            "FLASH"
+        ],
+        "config": {
+            "stdio_uart": {
+                "help": "default STDIO port is defined in PeripheralNames.h file, but it can be overridden, default UART_0",
+                "value": null
+            },
+            "stdio_uart_tx": {
+                "help": "default TX STDIO pins is defined in PinNames.h file, but it can be overridden, default P0_9",
+                "value": null
+            },
+            "stdio_uart_rx": {
+                "help": "default RX STDIO pins is defined in PinNames.h file, but it can be overridden, default P0_8",
+                "value": null
+            },
+            "us_ticker_timer": {
+                "help": "Select which timer (0-3) to use for us_ticker.c",
+                "value": 1
+            },
+            "lp_ticker_timer": {
+                "help": "Select which low power timer (0-1) to use for lp_ticker.c",
+                "value": 1
+            }
+        },
+        "supported_application_profiles" : ["full", "bare-metal"],
+        "supported_c_libs": {
+            "arm": [
+                "std",
+                "small"
+            ],
+            "gcc_arm": [
+                "std",
+                "small"
+            ]
+        }
+    },
+    "MAX32670EVKIT": {
+        "inherits": [
+            "MAX32670"
+        ],
+        "macros_add": [
+            "OPEN_DRAIN_LEDS"
+        ],
+        "extra_labels_add": [
+            "MAX32670EVKIT"
+        ],
+        "detect_code": [
+            "0424"
+        ]
     },
     "EFM32": {
         "inherits": [
@@ -8581,7 +8888,8 @@
             "FLASH",
             "MPU",
             "WATCHDOG",
-            "USBDEVICE"
+            "USBDEVICE",
+            "CAN"
         ],
         "components_add": [
             "FLASHIAP"
@@ -8753,7 +9061,8 @@
             "FLASH",
             "SPI",
             "I2C",
-            "SLEEP"
+            "SLEEP",
+            "ITM"
         ],
         "components": [
             "FLASHIAP"
@@ -8810,5 +9119,46 @@
     "__build_tools_metadata__": {
         "version": "1",
         "public": false
+    },
+    "TMPM4KN": {
+        "inherits": ["Target"],
+        "core": "Cortex-M4F",
+        "is_disk_virtual": true,
+        "extra_labels": ["TOSHIBA"],
+        "macros": ["__TMPM4KN__"],
+        "supported_toolchains": ["GCC_ARM","ARMC6"],
+        "device_has": [
+            "ANALOGIN",
+	    "INTERRUPTIN",
+	    "CRC",
+	    "I2C",
+	    "I2CSLAVE",
+	    "PORTIN",
+            "PORTINOUT",
+            "PORTOUT",
+	    "PWMOUT",
+	    "RESET_REASON",
+	    "SERIAL",
+	    "SLEEP",
+	    "SPI",
+	    "SPISLAVE",
+	    "USTICKER",
+	    "STDIO_MESSAGES",
+            "MPU",
+	    "FLASH"
+        ],
+        "device_name": "TMPM4KNFYAFG",
+        "detect_code": ["7020"],
+        "release_versions": ["5"],
+        "bootloader_supported": true,
+        "supported_application_profiles" : ["full"],
+        "supported_c_libs": {
+            "arm": [
+                "std"
+            ],
+            "gcc_arm": [
+                "std"
+            ]
+        }
     }
 }
